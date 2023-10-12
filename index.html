@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            align-items: center;
+        }
+        #input {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <input type = "email" id = "input">
+        <div id = "iddiv" style="display: none">&lt;div&gt;</div>
+    </div>
+    <script>
+     let input = document.getElementById("input");
+     let div = document.getElementById("iddiv");
+     input.addEventListener("focus", function() {
+     div.style.display = "block";
+ });
+     input.addEventListener("blur", function() {
+     div.style.display = "none";
+ });
+    </script>
 </body>
 </html>
